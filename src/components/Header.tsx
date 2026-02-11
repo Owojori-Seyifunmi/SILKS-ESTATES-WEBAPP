@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/silks-logo.png";
 
 const navLinks = [
+  { label: "Home", href: "/" },
   { label: "Rent", href: "/properties" },
   { label: "Landlords", href: "/landlord" },
   { label: "Tenants", href: "/tenants" },
@@ -26,7 +27,7 @@ const Header = () => {
         {/* Nav Links - Desktop */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => {
-            const isActive = location.pathname === link.href || (link.href === "/properties" && location.pathname === "/");
+            const isActive = location.pathname === link.href;
             return (
               <Link
                 key={link.href}
@@ -74,7 +75,7 @@ const Header = () => {
         <div className="md:hidden bg-background border-t border-border px-6 pb-6 pt-2">
           <nav className="flex flex-col gap-1">
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.href || (link.href === "/properties" && location.pathname === "/");
+              const isActive = location.pathname === link.href;
               return (
                 <Link
                   key={link.href}
