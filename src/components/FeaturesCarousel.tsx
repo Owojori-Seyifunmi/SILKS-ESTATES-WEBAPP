@@ -59,7 +59,7 @@ const FeaturesCarousel = () => {
             key={i}
             className="flex-shrink-0 w-80 bg-secondary rounded-xl p-8"
           >
-            <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-foreground text-background mb-5">
+            <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-brand text-brand-foreground mb-5">
               <item.icon className="w-5 h-5" />
             </div>
             <h3 className="font-heading text-lg font-bold text-foreground mb-2">

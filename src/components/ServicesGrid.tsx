@@ -18,12 +18,12 @@ const ServicesGrid = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {/* Full Property Management - large card */}
-          <div className="bg-foreground text-background rounded-2xl p-8 flex flex-col justify-between min-h-[280px]">
+          <div className="bg-brand text-brand-foreground rounded-2xl p-8 flex flex-col justify-between min-h-[280px]">
             <div>
               <h3 className="font-heading text-2xl font-bold mb-3">
                 Full Property Management
               </h3>
-              <p className="text-background/70 text-sm leading-relaxed max-w-sm">
+              <p className="text-brand-foreground/70 text-sm leading-relaxed max-w-sm">
                 Complete hands-off management of your property, from marketing to rent collection and maintenance.
               </p>
             </div>

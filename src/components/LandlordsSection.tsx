@@ -40,7 +40,7 @@ const LandlordsSection = () => {
 
             <Link
               to="/landlord"
-              className="inline-block bg-primary text-primary-foreground text-sm font-medium px-8 py-3 rounded-lg hover:opacity-90 transition-opacity"
+              className="inline-block bg-brand text-brand-foreground text-sm font-medium px-8 py-3 rounded-lg hover:opacity-90 transition-opacity"
             >
               Explore Landlord Services
             </Link>
