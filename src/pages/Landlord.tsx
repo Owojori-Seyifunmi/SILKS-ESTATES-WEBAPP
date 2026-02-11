@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Home, Megaphone, Users, Check } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ScrollReveal } from "@/hooks/useScrollAnimation";
+import heroImage from "@/assets/hero-building.jpg";
 
 const services = [
   {
@@ -56,14 +58,18 @@ const Landlord = () => {
       <Header />
 
       {/* Hero */}
-      <section className="pt-28 pb-16 bg-secondary">
-        <div className="container mx-auto px-6 text-center max-w-2xl">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground leading-tight mb-5">
+      <section className="relative pt-28 pb-20">
+        <div className="absolute inset-0">
+          <img src={heroImage} alt="Property" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-[hsl(var(--hero-overlay)/0.5)]" />
+        </div>
+        <div className="relative z-10 container mx-auto px-6 text-center max-w-2xl">
+          <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary-foreground leading-tight mb-5">
             Manage Your Property With
             <br />
             Confidence
           </h1>
-          <p className="text-muted-foreground text-base leading-relaxed mb-8 max-w-lg mx-auto">
+          <p className="text-primary-foreground/80 text-base leading-relaxed mb-8 max-w-lg mx-auto">
             Professional management, trusted tenants, and complete peace of mind—every step of the way.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -75,7 +81,7 @@ const Landlord = () => {
             </Link>
             <Link
               to="/properties"
-              className="border border-foreground/30 text-foreground text-sm font-medium px-8 py-3 rounded-lg hover:bg-foreground/5 transition-colors"
+              className="border border-primary-foreground/40 text-primary-foreground text-sm font-medium px-8 py-3 rounded-lg hover:bg-primary-foreground/10 transition-colors"
             >
               View Available Properties
             </Link>
@@ -86,35 +92,34 @@ const Landlord = () => {
       {/* Services */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-4">
+          <ScrollReveal className="text-center mb-4">
             <p className="text-sm font-semibold text-brand uppercase tracking-wider mb-2">
               Landlord Services
             </p>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-3">
               Professional Letting & Management Support.
             </h2>
-          </div>
+          </ScrollReveal>
 
           <p className="text-sm font-semibold text-foreground text-center mb-8">
             Our Services Include:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className="bg-secondary rounded-xl p-7 text-center"
-              >
-                <div className="w-12 h-12 rounded-lg bg-brand flex items-center justify-center mx-auto mb-4">
-                  <service.icon className="w-6 h-6 text-brand-foreground" />
+            {services.map((service, i) => (
+              <ScrollReveal key={service.title} delay={i * 0.1}>
+                <div className="bg-secondary rounded-xl p-7 text-center h-full">
+                  <div className="w-12 h-12 rounded-lg bg-brand flex items-center justify-center mx-auto mb-4">
+                    <service.icon className="w-6 h-6 text-brand-foreground" />
+                  </div>
+                  <h3 className="font-heading text-base font-semibold text-foreground mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
-                <h3 className="font-heading text-base font-semibold text-foreground mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -122,7 +127,7 @@ const Landlord = () => {
 
       {/* What We Provide */}
       <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-6 max-w-3xl">
+        <ScrollReveal className="container mx-auto px-6 max-w-3xl">
           <p className="text-muted-foreground text-sm leading-relaxed mb-8">
             Whether you are considering the possibility of becoming a Buy to Let Landlord or you already have a large portfolio.
           </p>
@@ -143,12 +148,12 @@ const Landlord = () => {
           <p className="text-muted-foreground text-sm leading-relaxed">
             If you have a property to let, please find out how we can help you by visiting your local independent letting agent Silks Estates via telephone or email.
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Fees */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-6 max-w-3xl">
+        <ScrollReveal className="container mx-auto px-6 max-w-3xl">
           <h2 className="font-heading text-3xl font-bold text-foreground mb-4">
             Fees
           </h2>
@@ -164,7 +169,7 @@ const Landlord = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Quick Links */}
@@ -189,7 +194,7 @@ const Landlord = () => {
 
       {/* CTA */}
       <section className="py-20 bg-foreground">
-        <div className="container mx-auto px-6 text-center max-w-lg">
+        <ScrollReveal className="container mx-auto px-6 text-center max-w-lg">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-background leading-tight mb-4">
             Let Your Property Be the Right Investment
           </h2>
@@ -202,7 +207,7 @@ const Landlord = () => {
           >
             Get Started
           </Link>
-        </div>
+        </ScrollReveal>
       </section>
 
       <Footer />

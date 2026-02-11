@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Mail, Phone, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ScrollReveal } from "@/hooks/useScrollAnimation";
+import heroImage from "@/assets/hero-building.jpg";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", phone: "", email: "", message: "" });
@@ -14,29 +16,30 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero */}
-      <section className="pt-28 pb-16 bg-secondary">
-        <div className="container mx-auto px-6 text-center max-w-2xl">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground leading-tight mb-5">
+      {/* Hero - matching rent page style */}
+      <section className="relative pt-28 pb-12">
+        <div className="absolute inset-0">
+          <img src={heroImage} alt="Property" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-[hsl(var(--hero-overlay)/0.5)]" />
+        </div>
+        <div className="relative z-10 container mx-auto px-6">
+          <h1 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-3">
             Get in Touch With Us
           </h1>
-          <p className="text-muted-foreground text-base leading-relaxed max-w-lg mx-auto">
+          <p className="text-primary-foreground/80 text-base max-w-xl">
             We're here to help with any questions you may have about renting, buying or any of our property services.
-          </p>
-          <p className="text-muted-foreground text-sm mt-2">
-            Contact us today and a member of our friendly team will be in touch shortly.
           </p>
         </div>
       </section>
 
       {/* Form + Info */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            {/* Form */}
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-5xl mx-auto">
+            {/* Form - takes 2 cols */}
+            <ScrollReveal className="lg:col-span-2">
               <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-                <div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <input
                     type="text"
                     name="name"
@@ -45,8 +48,6 @@ const Contact = () => {
                     onChange={handleChange}
                     className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-brand/30"
                   />
-                </div>
-                <div>
                   <input
                     type="tel"
                     name="phone"
@@ -56,26 +57,22 @@ const Contact = () => {
                     className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-brand/30"
                   />
                 </div>
-                <div>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Your@email.com"
-                    value={form.email}
-                    onChange={handleChange}
-                    className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-brand/30"
-                  />
-                </div>
-                <div>
-                  <textarea
-                    name="message"
-                    placeholder="Type your message..."
-                    rows={5}
-                    value={form.message}
-                    onChange={handleChange}
-                    className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-brand/30 resize-none"
-                  />
-                </div>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your@email.com"
+                  value={form.email}
+                  onChange={handleChange}
+                  className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-brand/30"
+                />
+                <textarea
+                  name="message"
+                  placeholder="Type your message..."
+                  rows={6}
+                  value={form.message}
+                  onChange={handleChange}
+                  className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-brand/30 resize-none"
+                />
                 <button
                   type="submit"
                   className="w-full bg-brand text-brand-foreground text-sm font-medium py-3 rounded-lg hover:opacity-90 transition-opacity"
@@ -83,10 +80,10 @@ const Contact = () => {
                   Send
                 </button>
               </form>
-            </div>
+            </ScrollReveal>
 
             {/* Contact Info */}
-            <div className="space-y-8">
+            <ScrollReveal delay={0.15} className="space-y-8">
               {/* Head Office */}
               <div>
                 <h3 className="font-heading text-base font-bold text-foreground mb-3">Head Office</h3>
@@ -114,13 +111,9 @@ const Contact = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed mb-2">
                   Silks Estates UK Ltd,
                   <br />
-                  254 Dewsbury Road
+                  254 Dewsbury Road, Leeds
                   <br />
-                  Leeds
-                  <br />
-                  West Yorkshire
-                  <br />
-                  LS11 6JQ
+                  West Yorkshire, LS11 6JQ
                 </p>
                 <div className="flex items-center gap-2 text-sm text-foreground mb-1">
                   <Phone className="w-4 h-4 text-brand" />
@@ -149,7 +142,7 @@ const Contact = () => {
                   by appointment only
                 </p>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
