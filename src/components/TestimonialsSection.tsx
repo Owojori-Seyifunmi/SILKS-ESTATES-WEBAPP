@@ -39,14 +39,14 @@ const TestimonialsSection = () => {
             <div key={t.name} className="bg-secondary rounded-xl p-7">
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: t.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-foreground text-foreground" />
+                  <Star key={i} className="w-4 h-4 fill-brand text-brand" />
                 ))}
               </div>
               <p className="text-sm text-foreground leading-relaxed mb-6">
                 "{t.text}"
               </p>
               <div>
-                <p className="text-sm font-semibold text-foreground">{t.name}</p>
+                <p className="text-sm font-semibold text-brand">{t.name}</p>
                 <p className="text-xs text-muted-foreground">{t.role}</p>
               </div>
             </div>

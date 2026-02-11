@@ -36,7 +36,7 @@ const PortalsSection = () => {
             </p>
             <Link
               to="/landlord"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground text-sm font-medium px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 bg-brand text-brand-foreground text-sm font-medium px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
             >
               View Latest Updates
               <ArrowRight className="w-4 h-4" />
