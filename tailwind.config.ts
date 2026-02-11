@@ -55,6 +55,10 @@ export default {
           active: "hsl(var(--nav-active))",
           inactive: "hsl(var(--nav-inactive))",
         },
+        brand: {
+          DEFAULT: "hsl(var(--brand))",
+          foreground: "hsl(var(--brand-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

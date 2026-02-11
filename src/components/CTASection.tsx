@@ -15,7 +15,7 @@ const CTASection = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             to="/contact"
-            className="bg-background text-foreground text-sm font-medium px-8 py-3 rounded-lg hover:opacity-90 transition-opacity"
+            className="bg-brand text-brand-foreground text-sm font-medium px-8 py-3 rounded-lg hover:opacity-90 transition-opacity"
           >
             Get free valuation
           </Link>

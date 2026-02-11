@@ -53,7 +53,7 @@ const Header = () => {
           </Link>
           <Link
             to="/signup"
-            className="text-sm font-medium bg-primary text-primary-foreground px-5 py-2 rounded-full hover:opacity-90 transition-opacity"
+            className="text-sm font-medium bg-brand text-brand-foreground px-5 py-2 rounded-full hover:opacity-90 transition-opacity"
           >
             Sign Up
           </Link>
@@ -102,7 +102,7 @@ const Header = () => {
             <Link
               to="/signup"
               onClick={() => setMobileOpen(false)}
-              className="text-sm font-medium bg-primary text-primary-foreground text-center px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity"
+              className="text-sm font-medium bg-brand text-brand-foreground text-center px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity"
             >
               Sign Up
             </Link>

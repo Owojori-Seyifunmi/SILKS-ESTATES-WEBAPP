@@ -26,7 +26,7 @@ const PortalsSection = () => {
             <ul className="space-y-2 mb-6">
               {portals.map((portal) => (
                 <li key={portal} className="flex items-center gap-2 text-sm text-foreground">
-                  <span className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand" />
                   {portal}
                 </li>
               ))}
