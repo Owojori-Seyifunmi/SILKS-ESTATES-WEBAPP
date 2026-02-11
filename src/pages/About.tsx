@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ScrollReveal } from "@/hooks/useScrollAnimation";
+import heroImage from "@/assets/hero-building.jpg";
 
 const objectives = [
   {
@@ -45,14 +47,18 @@ const About = () => {
       <Header />
 
       {/* Hero */}
-      <section className="pt-28 pb-16 bg-secondary">
-        <div className="container mx-auto px-6 text-center max-w-2xl">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground leading-tight mb-5">
+      <section className="relative pt-28 pb-20">
+        <div className="absolute inset-0">
+          <img src={heroImage} alt="Property" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-[hsl(var(--hero-overlay)/0.5)]" />
+        </div>
+        <div className="relative z-10 container mx-auto px-6 text-center max-w-2xl">
+          <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary-foreground leading-tight mb-5">
             Your local Independent
             <br />
             letting agent
           </h1>
-          <p className="text-muted-foreground text-base leading-relaxed mb-8 max-w-lg mx-auto">
+          <p className="text-primary-foreground/80 text-base leading-relaxed mb-8 max-w-lg mx-auto">
             We'll help you find quality homes with verified landlords, and professional engagement for a stress free renting.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -64,7 +70,7 @@ const About = () => {
             </Link>
             <Link
               to="/properties"
-              className="border border-foreground/30 text-foreground text-sm font-medium px-8 py-3 rounded-lg hover:bg-foreground/5 transition-colors"
+              className="border border-primary-foreground/40 text-primary-foreground text-sm font-medium px-8 py-3 rounded-lg hover:bg-primary-foreground/10 transition-colors"
             >
               View Available Properties
             </Link>
@@ -106,7 +112,7 @@ const About = () => {
 
       {/* Welcome */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-6 max-w-3xl">
+        <ScrollReveal className="container mx-auto px-6 max-w-3xl">
           <p className="text-xs font-semibold text-brand uppercase tracking-wider mb-3">
             Welcome to Silks Estates
           </p>
@@ -126,28 +132,30 @@ const About = () => {
             </Link>
             .
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Four Objectives */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-6 max-w-3xl">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground leading-tight mb-3">
-            As a landlord, we focus on our four main
-            <br />
-            objectives to form you a suitable strategy.
-          </h2>
+          <ScrollReveal>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground leading-tight mb-3">
+              As a landlord, we focus on our four main
+              <br />
+              objectives to form you a suitable strategy.
+            </h2>
+          </ScrollReveal>
 
           <div className="mt-10 space-y-10">
-            {objectives.map((obj) => (
-              <div key={obj.number}>
+            {objectives.map((obj, i) => (
+              <ScrollReveal key={obj.number} delay={i * 0.1}>
                 <h3 className="font-heading text-lg font-bold text-foreground mb-2">
                   <span className="text-brand">{obj.number}.</span> {obj.title}:
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {obj.description}
                 </p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

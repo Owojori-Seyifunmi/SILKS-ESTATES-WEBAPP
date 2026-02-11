@@ -3,6 +3,8 @@ import { Search, Calendar, ShieldCheck, Home } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ScrollReveal } from "@/hooks/useScrollAnimation";
+import heroImage from "@/assets/hero-building.jpg";
 
 const steps = [
   {
@@ -52,14 +54,18 @@ const Tenants = () => {
       <Header />
 
       {/* Hero */}
-      <section className="pt-28 pb-16 bg-secondary">
-        <div className="container mx-auto px-6 text-center max-w-2xl">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground leading-tight mb-5">
+      <section className="relative pt-28 pb-20">
+        <div className="absolute inset-0">
+          <img src={heroImage} alt="Property" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-[hsl(var(--hero-overlay)/0.5)]" />
+        </div>
+        <div className="relative z-10 container mx-auto px-6 text-center max-w-2xl">
+          <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary-foreground leading-tight mb-5">
             Find a Home that
             <br />
             fits your Life
           </h1>
-          <p className="text-muted-foreground text-base leading-relaxed mb-8 max-w-lg mx-auto">
+          <p className="text-primary-foreground/80 text-base leading-relaxed mb-8 max-w-lg mx-auto">
             Quality homes, verified landlords, and professional engagement making renting simple, secure and stress-free.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -71,7 +77,7 @@ const Tenants = () => {
             </Link>
             <Link
               to="/properties"
-              className="border border-foreground/30 text-foreground text-sm font-medium px-8 py-3 rounded-lg hover:bg-foreground/5 transition-colors"
+              className="border border-primary-foreground/40 text-primary-foreground text-sm font-medium px-8 py-3 rounded-lg hover:bg-primary-foreground/10 transition-colors"
             >
               View Available Properties
             </Link>
@@ -114,18 +120,18 @@ const Tenants = () => {
       {/* How It Works */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
+          <ScrollReveal className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-3">
               How Renting with Silks
               <br />
               Estates Works
             </h2>
             <p className="text-muted-foreground text-sm">Simple, Secure and Stress free.</p>
-          </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {steps.map((step, i) => (
-              <div key={step.title} className="text-center">
+              <ScrollReveal key={step.title} delay={i * 0.1} className="text-center">
                 <div className="w-14 h-14 rounded-xl bg-brand flex items-center justify-center mx-auto mb-4">
                   <step.icon className="w-7 h-7 text-brand-foreground" />
                 </div>
@@ -135,28 +141,26 @@ const Tenants = () => {
                 <p className="text-xs text-muted-foreground leading-relaxed">
                   {step.description}
                 </p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
 
-          <div className="text-center mt-10">
+          <ScrollReveal className="text-center mt-10">
             <Link
               to="/properties"
               className="inline-block bg-brand text-brand-foreground text-sm font-medium px-8 py-3 rounded-lg hover:opacity-90 transition-opacity"
             >
               Find a Home
             </Link>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Mission / Why Choose Us */}
       <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-6 max-w-3xl">
+        <ScrollReveal className="container mx-auto px-6 max-w-3xl">
           <h2 className="font-heading text-2xl font-bold text-foreground mb-2">Tenants</h2>
-          <p className="text-sm font-semibold text-brand mb-4">
-            Our Mission:
-          </p>
+          <p className="text-sm font-semibold text-brand mb-4">Our Mission:</p>
           <p className="text-sm text-muted-foreground leading-relaxed mb-6">
             Silks Estate aims to find you a property in which you can feel at home. We guarantee you to make the tenancy process from viewing a property to moving in as simple as possible.
           </p>
@@ -177,38 +181,40 @@ const Tenants = () => {
           <p className="text-sm text-muted-foreground leading-relaxed">
             Our office maintains a database of available rental properties, and prospective tenants. As soon as properties become available our first action is to contact prospective tenants on the database whose requirements match the property. If you are a tenant looking for a rental property then please call Silks Estates.
           </p>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* FAQs */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6 max-w-3xl">
-          <div className="text-center mb-10">
+          <ScrollReveal className="text-center mb-10">
             <h2 className="font-heading text-3xl font-bold text-foreground mb-3">Tenant FAQs</h2>
             <p className="text-muted-foreground text-sm">Simple, Secure and Stress free.</p>
-          </div>
+          </ScrollReveal>
 
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, i) => (
-              <AccordionItem key={i} value={`faq-${i}`}>
-                <AccordionTrigger className="text-sm font-medium text-foreground">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-sm text-muted-foreground">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <ScrollReveal>
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, i) => (
+                <AccordionItem key={i} value={`faq-${i}`}>
+                  <AccordionTrigger className="text-sm font-medium text-foreground">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-sm text-muted-foreground">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </ScrollReveal>
 
-          <div className="text-center mt-10">
+          <ScrollReveal className="text-center mt-10">
             <Link
               to="/properties"
               className="inline-block bg-brand text-brand-foreground text-sm font-medium px-8 py-3 rounded-lg hover:opacity-90 transition-opacity"
             >
               Find a Home
             </Link>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
