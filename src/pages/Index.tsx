@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import PropertiesSection from "@/components/PropertiesSection";
 import LandlordsSection from "@/components/LandlordsSection";
 import FeaturesCarousel from "@/components/FeaturesCarousel";
+import ServicesGrid from "@/components/ServicesGrid";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <PropertiesSection />
       <LandlordsSection />
       <FeaturesCarousel />
+      <ServicesGrid />
     </div>
   );
 };
