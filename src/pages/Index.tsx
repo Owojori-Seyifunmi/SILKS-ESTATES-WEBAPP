@@ -4,6 +4,8 @@ import PropertiesSection from "@/components/PropertiesSection";
 import LandlordsSection from "@/components/LandlordsSection";
 import FeaturesCarousel from "@/components/FeaturesCarousel";
 import ServicesGrid from "@/components/ServicesGrid";
+import PortalsSection from "@/components/PortalsSection";
+import LettingLawsSection from "@/components/LettingLawsSection";
 
 const Index = () => {
   return (
@@ -14,6 +16,8 @@ const Index = () => {
       <LandlordsSection />
       <FeaturesCarousel />
       <ServicesGrid />
+      <PortalsSection />
+      <LettingLawsSection />
     </div>
   );
 };
