@@ -6,6 +6,9 @@ import FeaturesCarousel from "@/components/FeaturesCarousel";
 import ServicesGrid from "@/components/ServicesGrid";
 import PortalsSection from "@/components/PortalsSection";
 import LettingLawsSection from "@/components/LettingLawsSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -18,6 +21,9 @@ const Index = () => {
       <ServicesGrid />
       <PortalsSection />
       <LettingLawsSection />
+      <TestimonialsSection />
+      <CTASection />
+      <Footer />
     </div>
   );
 };
