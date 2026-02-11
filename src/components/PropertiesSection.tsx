@@ -83,7 +83,7 @@ const PropertiesSection = () => {
                 </div>
                 <Link
                   to={`/properties/${property.id}`}
-                  className="inline-block w-full text-center bg-primary text-primary-foreground text-sm font-medium py-2.5 rounded-lg hover:opacity-90 transition-opacity"
+                  className="inline-block w-full text-center bg-brand text-brand-foreground text-sm font-medium py-2.5 rounded-lg hover:opacity-90 transition-opacity"
                 >
                   Rent now
                 </Link>
@@ -96,7 +96,7 @@ const PropertiesSection = () => {
         <div className="mt-12 text-center">
           <Link
             to="/properties"
-            className="inline-block border border-foreground text-foreground text-sm font-medium px-8 py-3 rounded-lg hover:bg-foreground hover:text-background transition-colors"
+            className="inline-block border border-brand text-brand text-sm font-medium px-8 py-3 rounded-lg hover:bg-brand hover:text-brand-foreground transition-colors"
           >
             View all available properties
           </Link>
