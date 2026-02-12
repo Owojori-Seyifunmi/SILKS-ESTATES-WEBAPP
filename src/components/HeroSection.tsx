@@ -3,7 +3,7 @@ import heroImage from "@/assets/hero-building.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[85vh] flex items-center">
+    <section className="relative min-h-[100vh] flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -17,11 +17,11 @@ const HeroSection = () => {
       {/* Hero Content */}
       <div className="relative z-10 container mx-auto px-6 pt-24">
         <div className="max-w-lg">
-           <h1 className="font-heading text-5xl md:text-6xl font-bold leading-tight text-primary-foreground mb-6">
-            Discover Your Perfect Property Today
+           <h1 className="font-heading text-5xl md:text-6xl font-semibold leading-tight text-primary-foreground mb-6">
+            Find Your Ideal Home in Batley & West Yorkshire
           </h1>
           <p className="text-primary-foreground/80 text-base md:text-lg max-w-sm leading-relaxed">
-            Real estate properties for sale and rent in over 12+ countries
+            Quality properties for sale and rent across Batley and West Yorkshire
           </p>
         </div>
 
@@ -43,9 +43,8 @@ const HeroSection = () => {
               <div className="flex-1 w-full">
                 <label className="text-xs text-muted-foreground mb-1 block">Location</label>
                 <select className="w-full text-sm font-medium text-foreground bg-secondary rounded-lg px-3 py-2.5 border-0 focus:ring-1 focus:ring-ring outline-none appearance-none cursor-pointer">
-                  <option>New York City</option>
-                  <option>London</option>
-                  <option>Dubai</option>
+                  <option>Batley</option>
+                  <option>West Yorkshire</option>
                 </select>
               </div>
               <div className="flex-1 w-full">
@@ -59,9 +58,9 @@ const HeroSection = () => {
               <div className="flex-1 w-full">
                 <label className="text-xs text-muted-foreground mb-1 block">Price Range</label>
                 <select className="w-full text-sm font-medium text-foreground bg-secondary rounded-lg px-3 py-2.5 border-0 focus:ring-1 focus:ring-ring outline-none appearance-none cursor-pointer">
-                  <option>$21,000 – $40,000</option>
-                  <option>$40,000 – $80,000</option>
-                  <option>$80,000+</option>
+                  <option>£100,000 – £200,000</option>
+                  <option>£200,000 – £350,000</option>
+                  <option>£350,000+</option>
                 </select>
               </div>
               <button className="flex items-center gap-2 bg-brand text-brand-foreground px-6 py-2.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap">
