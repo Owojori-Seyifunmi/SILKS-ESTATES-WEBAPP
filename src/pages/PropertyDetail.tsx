@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 // Get Supabase function URL from environment variable
-const FUNCTION_URL = import.meta.env.VITE_SUPABASE_FUNCTION_URL;
+const FUNCTION_URL = "https://yqbphdwjrkpzdvsufjsv.supabase.co/functions/v1/tenninety";
 
 const PropertyDetail = () => {
   const { id } = useParams(); // This is property_ref from the URL

@@ -3,8 +3,7 @@ import { Bed, Bath, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Get Supabase function URL from environment variable
-const FUNCTION_URL = import.meta.env.VITE_SUPABASE_FUNCTION_URL || 
-  'https://YOUR_PROJECT_REF.supabase.co/functions/v1/tenninety';
+const FUNCTION_URL ='https://yqbphdwjrkpzdvsufjsv.supabase.co/functions/v1/tenninety';
 
 const PropertiesSection = () => {
   const [properties, setProperties] = useState([]);
