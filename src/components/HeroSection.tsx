@@ -1,5 +1,6 @@
 import { Search } from "lucide-react";
 import heroImage from "@/assets/hero-building.jpg";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -63,10 +64,10 @@ const HeroSection = () => {
                   <option>£350,000+</option>
                 </select>
               </div>
-              <button className="flex items-center gap-2 bg-brand text-brand-foreground px-6 py-2.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap">
+              <Link to="/properties" className="flex items-center gap-2 bg-brand text-brand-foreground px-6 py-2.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap">
                 <Search className="w-4 h-4" />
                 Search
-              </button>
+              </Link >
             </div>
           </div>
         </div>
