@@ -31,8 +31,7 @@ const HeroSection = () => {
           <div className="bg-background rounded-xl shadow-xl p-6">
             {/* Tabs */}
             <div className="flex gap-6 mb-6">
-              <button className="text-sm font-semibold text-foreground border-b-2 border-foreground pb-1">
-                Let your property
+              <button className="text-sm font-semibold text-foreground border-b-2 border-foreground pb-1">                Let your property
               </button>
               <button className="text-sm font-medium text-muted-foreground pb-1 hover:text-foreground transition-colors">
                 Get a valuation
@@ -57,17 +56,17 @@ const HeroSection = () => {
                 </select>
               </div>
               <div className="flex-1 w-full">
-                <label className="text-xs text-muted-foreground mb-1 block">Price Range</label>
+                <label className="text-xs text-muted-foreground mb-1 block">Service</label>
                 <select className="w-full text-sm font-medium text-foreground bg-secondary rounded-lg px-3 py-2.5 border-0 focus:ring-1 focus:ring-ring outline-none appearance-none cursor-pointer">
-                  <option>£100,000 – £200,000</option>
-                  <option>£200,000 – £350,000</option>
-                  <option>£350,000+</option>
+                  <option>Full Management</option>
+                  <option>Tenant Find</option>
+                  <option>E-Let Service</option>
                 </select>
               </div>
               <Link to="/properties" className="flex items-center gap-2 bg-brand text-brand-foreground px-6 py-2.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap">
                 <Search className="w-4 h-4" />
                 Search
-              </Link >
+              </Link>
             </div>
           </div>
         </div>
