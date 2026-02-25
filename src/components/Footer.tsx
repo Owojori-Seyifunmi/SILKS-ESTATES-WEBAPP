@@ -20,6 +20,9 @@ const footerLinks = {
     { label: "Cookie Policy", href: "/cookies" },
   ],
 };
+const scroolToTop = ()=>{
+  window.scrollTo({ top: 0, behavior: "instant" });
+}
 
 const Footer = () => {
   return (
@@ -31,6 +34,7 @@ const Footer = () => {
             <p className="text-background/60 text-sm leading-relaxed">
               Professional property management and letting services for landlords across the UK.
             </p>
+            <b onClick={scroolToTop} className="text-background/60 text-sm leading-relaxed cursor-pointer">Scroll to Top</b>
           </div>
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>

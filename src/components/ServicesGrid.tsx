@@ -3,8 +3,22 @@ import { Link } from "react-router-dom";
 
 const ServicesGrid = () => {
   return (
-    <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-6">
+    <section className="relative py-20 bg-secondary overflow-hidden">
+      {/* Subtle background grid pattern — matches RentersRightsBill */}
+      <div
+        className="absolute inset-0 opacity-[0.035]"
+        style={{
+          backgroundImage:
+            "linear-gradient(hsl(var(--brand)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--brand)) 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
+        }}
+      />
+
+      {/* Accent glows */}
+      <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-brand/10 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-10 -left-10 w-60 h-60 rounded-full bg-brand/5 blur-2xl pointer-events-none" />
+
+      <div className="relative z-10 container mx-auto px-6">
         <div className="mb-12">
           <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">
             Our Landlord Services
@@ -55,7 +69,7 @@ const ServicesGrid = () => {
             </Link>
           </div>
 
-          {/* Asset Protection */}
+          {/* Asset Protection — commented out as per client request */}
           {/* <div className="bg-card border border-border rounded-2xl p-8 flex flex-col justify-between min-h-[280px]">
             <div>
               <h3 className="font-heading text-2xl font-bold text-foreground mb-3">

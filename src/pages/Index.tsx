@@ -10,23 +10,46 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import RentersRightsBill from "@/components/RentersRightBill";
+import PartnersBanner from "@/components/PatnersBanner";
+import { ScrollReveal } from "@/hooks/useScrollAnimation";
 
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <HeroSection />
-      <PropertiesSection />
-      <LandlordsSection />
-      <RentersRightsBill />
-      <FeaturesCarousel />
-      <ServicesGrid />
+      <ScrollReveal>
+        <HeroSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <PropertiesSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <PartnersBanner />
+      </ScrollReveal>
+      <ScrollReveal>
+        <LandlordsSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <RentersRightsBill />
+      </ScrollReveal>
+      <ScrollReveal>
+        <FeaturesCarousel />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ServicesGrid />
+      </ScrollReveal>
       {/* <PortalsSection /> */}
       {/* <LettingLawsSection /> */}
-      <TestimonialsSection />
-      <CTASection />
-      <Footer />
+      <ScrollReveal>
+        <TestimonialsSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <CTASection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Footer />
+      </ScrollReveal>
     </div>
   );
 };
