@@ -56,7 +56,7 @@ const ServicesGrid = () => {
           </div>
 
           {/* Asset Protection */}
-          <div className="bg-card border border-border rounded-2xl p-8 flex flex-col justify-between min-h-[280px]">
+          {/* <div className="bg-card border border-border rounded-2xl p-8 flex flex-col justify-between min-h-[280px]">
             <div>
               <h3 className="font-heading text-2xl font-bold text-foreground mb-3">
                 Asset Protection Protect
@@ -72,7 +72,7 @@ const ServicesGrid = () => {
               Learn more
               <ArrowRight className="w-4 h-4" />
             </Link>
-          </div>
+          </div> */}
 
           {/* E-Let Service */}
           <div className="bg-card border border-border rounded-2xl p-8 flex flex-col justify-between min-h-[280px]">

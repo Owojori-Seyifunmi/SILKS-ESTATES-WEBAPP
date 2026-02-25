@@ -35,16 +35,16 @@ const faqs = [
     answer: "No, we do not charge tenants any fees for our services. All costs are covered by the landlord as part of our management agreement.",
   },
   {
-    question: "Are properties fully managed?",
-    answer: "Yes, most of our properties are fully managed. This means we handle everything from maintenance requests to rent collection on behalf of the landlord.",
-  },
-  {
     question: "How long does approval take?",
-    answer: "The approval process typically takes 2-5 working days, depending on reference checks and credit assessments.",
+    answer: "The approval process typically takes 2-3 weeks, depending on reference checks and credit assessments.",
   },
   {
     question: "Who handles repairs?",
     answer: "Our dedicated maintenance team handles all repair requests. Tenants can report issues directly to us and we coordinate with trusted contractors to resolve them promptly.",
+  },
+  {
+    question:"Do I get my deposit back after my tenancy?",
+    answer:"Yes, subject to the property being left in the same state it was given in, with no arrears.",
   },
 ];
 

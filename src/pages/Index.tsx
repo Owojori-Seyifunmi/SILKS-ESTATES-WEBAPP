@@ -9,6 +9,8 @@ import LettingLawsSection from "@/components/LettingLawsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import RentersRightsBill from "@/components/RentersRightBill";
+
 
 const Index = () => {
   return (
@@ -17,10 +19,11 @@ const Index = () => {
       <HeroSection />
       <PropertiesSection />
       <LandlordsSection />
+      <RentersRightsBill />
       <FeaturesCarousel />
       <ServicesGrid />
-      <PortalsSection />
-      <LettingLawsSection />
+      {/* <PortalsSection /> */}
+      {/* <LettingLawsSection /> */}
       <TestimonialsSection />
       <CTASection />
       <Footer />

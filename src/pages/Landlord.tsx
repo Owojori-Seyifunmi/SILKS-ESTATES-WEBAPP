@@ -21,13 +21,17 @@ const services = [
     title: "Tenants Find Only",
     description: "Find tenants for our owners",
   },
+  {
+    icon: Check,
+    title: "Free Property",
+    description: "Portfolio Compliance Check",
+  },
 ];
 
 const provideItems = [
-  "Independent appraisals of quality properties",
+  "Rental appraisals for your property or properties",
   "Open and transparent fees with no hidden charges",
   "Expert and up-to-date legal information about the lettings market",
-  "Market-leading, cost-effective insurance packages for landlords and tenants",
   "Easy to read agreements for tenants and landlords",
 ];
 
@@ -39,7 +43,8 @@ const feeItems = [
   "Collecting the rent and accounting to you monthly",
   "Conducting regular property inspections and advising you that all is in order",
   "Advising on any repairs that may be necessary",
-  "Providing information and help on insurance and tax matters",
+  "Banking of deposits",
+  "Ensuring all legal documentation is provided to all parties",
 ];
 
 const quickLinks = [
@@ -79,12 +84,6 @@ const Landlord = () => {
             >
               Get free valuation
             </Link>
-            <Link
-              to="/properties"
-              className="border border-primary-foreground/40 text-primary-foreground text-sm font-medium px-8 py-3 rounded-lg hover:bg-primary-foreground/10 transition-colors"
-            >
-              View Available Properties
-            </Link>
           </div>
         </div>
       </section>
@@ -105,7 +104,7 @@ const Landlord = () => {
             Our Services Include:
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {services.map((service, i) => (
               <ScrollReveal key={service.title} delay={i * 0.1}>
                 <div className="bg-secondary rounded-xl p-7 text-center h-full">

@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Rent", href: "/properties" },
   { label: "Landlords", href: "/landlord" },
   { label: "Tenants", href: "/tenants" },
-  { label: "About", href: "/about" },
+  { label: "About Us", href: "/about" },
 ];
 
 const Header = () => {

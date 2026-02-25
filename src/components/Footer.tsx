@@ -6,7 +6,7 @@ const footerLinks = {
     { label: "Full Management", href: "/landlord" },
     { label: "Tenant Find", href: "/landlord" },
     { label: "Asset Protection", href: "/landlord" },
-    { label: "E-Let Service", href: "/landlord" },
+    { label: "E-Letz", href: "/landlord" },
   ],
   Company: [
     { label: "About Us", href: "/about" },

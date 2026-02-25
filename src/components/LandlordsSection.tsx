@@ -23,7 +23,7 @@ const LandlordsSection = () => {
               with Confidence
             </h2>
             <p className="text-muted-foreground text-base leading-relaxed mb-10 max-w-lg">
-              Silks Estates is designed around landlords. Our services are structured to protect your asset, maximize returns, and remove the stress of property management.
+              Silks Estates is designed around landlords. Our services are structured to protect your asset, and remove the stress of property management.
             </p>
 
             <p className="text-sm font-semibold text-foreground mb-4">Top Features:</p>

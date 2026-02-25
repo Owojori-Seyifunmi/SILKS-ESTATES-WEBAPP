@@ -5,21 +5,25 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 // Get Supabase function URL from environment variable
-const FUNCTION_URL = 'https://yqbphdwjrkpzdvsufjsv.supabase.co/functions/v1/tenninety';
+const FUNCTION_URL = import.meta.env.VITE_SUPABASE_FUNCTION_URL || 
+  'https://YOUR_PROJECT_REF.supabase.co/functions/v1/tenninety';
 
-const portals = ["Rightmove", "Zoopla", "OpenRent", "On the Market", "PrimeLocation"];
+const portals = ["Zoopla","On the Market",];
 
 const Properties = () => {
   const [properties, setProperties] = useState([]);
   const [searchableAreas, setSearchableAreas] = useState([]);
+  const [propertyTypes, setPropertyTypes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [loadingAreas, setLoadingAreas] = useState(true);
+  const [loadingTypes, setLoadingTypes] = useState(true);
   const [error, setError] = useState(null);
   const [sortBy, setSortBy] = useState("recent");
   
   // Filters
   const [filters, setFilters] = useState({
     location: "",
+    propertyType: "",
     minBedrooms: "",
     maxPrice: "",
     transType: "2", // Default to lettings (2)
@@ -28,6 +32,11 @@ const Properties = () => {
   // Fetch searchable areas on mount
   useEffect(() => {
     fetchSearchableAreas();
+  }, []);
+
+  // Fetch property types on mount
+  useEffect(() => {
+    fetchPropertyTypes();
   }, []);
 
   // Fetch properties on mount
@@ -58,6 +67,29 @@ const Properties = () => {
     }
   };
 
+  // Fetch property types
+  const fetchPropertyTypes = async () => {
+    setLoadingTypes(true);
+    try {
+      const params = new URLSearchParams({
+        endpoint: 'property_types',
+      });
+
+      const response = await fetch(`${FUNCTION_URL}?${params}`);
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch property types');
+      }
+
+      const data = await response.json();
+      setPropertyTypes(data.property_types || []);
+    } catch (err) {
+      console.error('Error fetching property types:', err);
+    } finally {
+      setLoadingTypes(false);
+    }
+  };
+
   // Fetch properties from API
   const fetchProperties = async () => {
     setLoading(true);
@@ -81,6 +113,9 @@ const Properties = () => {
       }
       if (filters.location) {
         params.append('searchable_areas', filters.location);
+      }
+      if (filters.propertyType) {
+        params.append('prop_sub_ids', filters.propertyType);
       }
 
       const response = await fetch(`${FUNCTION_URL}?${params}`);
@@ -113,7 +148,7 @@ const Properties = () => {
         return b.price - a.price;
       case 'recent':
       default:
-        return (new Date(b.update_date || 0).getTime()) - (new Date(a.update_date || 0).getTime());
+        return new Date(b.update_date) - new Date(a.update_date);
     }
   });
 
@@ -149,6 +184,22 @@ const Properties = () => {
                 {searchableAreas.map((area) => (
                   <option key={area.id} value={area.id}>
                     {area.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="flex-1 w-full">
+              <label className="text-xs text-muted-foreground mb-1 block">Property Type</label>
+              <select 
+                value={filters.propertyType}
+                onChange={(e) => setFilters({...filters, propertyType: e.target.value})}
+                disabled={loadingTypes}
+                className="w-full text-sm font-medium text-foreground bg-secondary rounded-lg px-3 py-2.5 border-0 focus:ring-1 focus:ring-ring outline-none appearance-none cursor-pointer disabled:opacity-50"
+              >
+                <option value="">All Types</option>
+                {propertyTypes.map((type) => (
+                  <option key={type.id} value={type.id}>
+                    {type.name}
                   </option>
                 ))}
               </select>
@@ -283,6 +334,7 @@ const Properties = () => {
                     onClick={() => {
                       setFilters({
                         location: "",
+                        propertyType: "",
                         minBedrooms: "",
                         maxPrice: "",
                         transType: "2",

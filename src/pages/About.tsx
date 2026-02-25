@@ -4,6 +4,32 @@ import Footer from "@/components/Footer";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
 import heroImage from "@/assets/hero-building.jpg";
 
+// ── Replace these placeholders with real data when client sends details ──────
+// To add a photo: import the image at the top and set the photo field.
+// Example: import ibrahimPhoto from "@/assets/team/ibrahim.jpg";
+// Then set photo: ibrahimPhoto on the relevant team member.
+const teamMembers = [
+  {
+    name: "Team lead",               // ← update name
+    role: "Director",              // ← update role
+    bio: "Bio coming soon — update when client provides details.", // ← update bio
+    photo: null,                   // ← replace null with imported image variable
+  },
+  {
+    name: "Team Member 2",         // ← update name
+    role: "Property Manager",      // ← update role
+    bio: "Bio coming soon — update when client provides details.",
+    photo: null,
+  },
+  {
+    name: "Team Member 3",         // ← update name
+    role: "Lettings Negotiator",   // ← update role
+    bio: "Bio coming soon — update when client provides details.",
+    photo: null,
+  },
+];
+// ─────────────────────────────────────────────────────────────────────────────
+
 const objectives = [
   {
     number: "1",
@@ -160,6 +186,75 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* ── Meet the Team ───────────────────────────────────────────────────── */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <ScrollReveal>
+            <p className="text-xs font-semibold text-brand uppercase tracking-wider mb-2">
+              Our People
+            </p>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-3">
+              Meet the Team
+            </h2>
+            <p className="text-sm text-muted-foreground max-w-xl mb-12">
+              The dedicated professionals behind Silks Estates — committed to making your lettings experience seamless from start to finish.
+            </p>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.map((member, i) => (
+              <ScrollReveal key={member.name} delay={i * 0.1}>
+                <div className="bg-secondary rounded-xl overflow-hidden hover:shadow-md transition-shadow duration-300">
+                  {/* Photo */}
+                  <div className="aspect-[4/3] bg-muted flex items-center justify-center overflow-hidden">
+                    {member.photo ? (
+                      <img
+                        src={member.photo}
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      // Placeholder shown until client sends real photo
+                      <div className="flex flex-col items-center justify-center gap-2 text-muted-foreground/40">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-16 h-16"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={1}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M15.75 7.5a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 19.5a9 9 0 1115 0"
+                          />
+                        </svg>
+                        <span className="text-xs">Photo coming soon</span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Info */}
+                  <div className="p-5">
+                    <h3 className="font-heading text-base font-bold text-foreground">
+                      {member.name}
+                    </h3>
+                    <p className="text-xs font-semibold text-brand uppercase tracking-wider mt-0.5 mb-3">
+                      {member.role}
+                    </p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {member.bio}
+                    </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* ── End Meet the Team ───────────────────────────────────────────────── */}
 
       {/* Quick Links */}
       <section className="py-12 bg-background">
