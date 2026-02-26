@@ -5,8 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 // Get Supabase function URL from environment variable
-const FUNCTION_URL = import.meta.env.VITE_SUPABASE_FUNCTION_URL || 
-  'https://YOUR_PROJECT_REF.supabase.co/functions/v1/tenninety';
+const FUNCTION_URL = 'https://yqbphdwjrkpzdvsufjsv.supabase.co/functions/v1/tenninety';
 
 const portals = ["Zoopla","On the Market",];
 
@@ -148,7 +147,7 @@ const Properties = () => {
         return b.price - a.price;
       case 'recent':
       default:
-        return new Date(b.update_date) - new Date(a.update_date);
+        return new Date(b.update_date).getTime() - new Date(a.update_date).getTime();
     }
   });
 
