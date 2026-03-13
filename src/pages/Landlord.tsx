@@ -23,7 +23,7 @@ const services = [
   },
   {
     icon: Check,
-    title: "Free Property",
+    title: "Free Property Compliance Check",
     description: "Portfolio Compliance Check",
   },
 ];
