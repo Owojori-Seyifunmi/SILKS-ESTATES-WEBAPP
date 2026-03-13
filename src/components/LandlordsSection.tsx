@@ -5,7 +5,7 @@ const features = [
   "Professional tenant sourcing & vetting",
   "Full property management options",
   "Rent collection & clear financial reporting",
-  "Legal compliance & asset protection",
+  "Legal compliance",
 ];
 
 const LandlordsSection = () => {
