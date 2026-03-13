@@ -1,10 +1,10 @@
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
 
 const partners = [
-  { name: "Citywide Housing" },
-  { name: "Silks Investments" },
-  { name: "Nujum Sports" },
-  { name: "Ethical Wealth Academy" },
+  { name: "Citywide Housing", url: "https://citywidehousing.co.uk/" },
+  { name: "Silks Investments", url: "https://silksinvestments.co.uk/" },
+  { name: "Nujum Sports", url: "https://nujumsports.co.uk/" },
+  { name: "Ethical Wealth Academy", url: "https://ethicalwealth.academy/" },
 ];
 
 const PartnersBanner = () => {
@@ -23,21 +23,24 @@ const PartnersBanner = () => {
 
         {/* Partners — inline, spaced, muted */}
         <ScrollReveal>
-          <div className="flex flex-nowrap justify-center items-center gap-x-12 gap-y-6">
-            {partners.map((partner, i) => (
-              <span
+          <div className="flex flex-wrap md:flex-nowrap justify-center items-center gap-x-12 gap-y-6">
+            {partners.map((partner) => (
+              <a
                 key={partner.name}
-                className="font-heading text-xl md:text-2xl font-semibold transition-colors duration-300 cursor-default hover:opacity-100"
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-heading text-xl md:text-2xl font-semibold no-underline"
                 style={{
                   color: "hsl(var(--muted-foreground))",
                   opacity: 0.45,
-                  transitionProperty: "opacity",
+                  transition: "opacity 0.3s",
                 }}
                 onMouseEnter={e => (e.currentTarget.style.opacity = "0.85")}
                 onMouseLeave={e => (e.currentTarget.style.opacity = "0.45")}
               >
                 {partner.name}
-              </span>
+              </a>
             ))}
           </div>
         </ScrollReveal>
