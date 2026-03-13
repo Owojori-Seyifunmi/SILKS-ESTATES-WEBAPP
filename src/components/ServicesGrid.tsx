@@ -88,11 +88,11 @@ const ServicesGrid = () => {
             </Link>
           </div> */}
 
-          {/* E-Let Service */}
+          {/* E-Letz Service */}
           <div className="bg-card border border-border rounded-2xl p-8 flex flex-col justify-between min-h-[280px]">
             <div>
               <h3 className="font-heading text-2xl font-bold text-foreground mb-3">
-                E-Let Service
+                E-Letz Service
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
                 A streamlined, digital-first letting solution for modern landlords.
