@@ -60,7 +60,7 @@ const HeroSection = () => {
                 <select className="w-full text-sm font-medium text-foreground bg-secondary rounded-lg px-3 py-2.5 border-0 focus:ring-1 focus:ring-ring outline-none appearance-none cursor-pointer">
                   <option>Full Management</option>
                   <option>Tenant Find</option>
-                  <option>E-Let Service</option>
+                  <option>E-Letz Service</option>
                 </select>
               </div>
               <Link to="/properties" className="flex items-center gap-2 bg-brand text-brand-foreground px-6 py-2.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap">
