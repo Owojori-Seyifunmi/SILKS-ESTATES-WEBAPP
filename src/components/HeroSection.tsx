@@ -22,7 +22,7 @@ const HeroSection = () => {
             Your Trusted Partner in Property Letting 
           </h1>
           <p className="text-primary-foreground/80 text-base md:text-lg max-w-sm leading-relaxed">
-           Professional letting and property management services for landlords across Batley and West Yorkshire
+           Professional letting and property management services for landlords across Batley, West Yorkshire, Leeds.
           </p>
         </div>
 
