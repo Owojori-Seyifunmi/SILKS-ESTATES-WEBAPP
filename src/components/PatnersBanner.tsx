@@ -23,7 +23,7 @@ const PartnersBanner = () => {
 
         {/* Partners — inline, spaced, muted */}
         <ScrollReveal>
-          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
+          <div className="flex flex-nowrap justify-center items-center gap-x-12 gap-y-6">
             {partners.map((partner, i) => (
               <span
                 key={partner.name}
