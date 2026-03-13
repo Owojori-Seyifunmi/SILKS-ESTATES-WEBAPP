@@ -17,7 +17,7 @@ const PartnersBanner = () => {
             className="text-center mb-10 tracking-[0.2em] uppercase text-xs font-medium"
             style={{ color: "hsl(var(--muted-foreground))", opacity: 0.7 }}
           >
-            Trusted Partners, Shared Values
+            Trusted Partners
           </p>
         </ScrollReveal>
 
