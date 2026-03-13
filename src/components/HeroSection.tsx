@@ -19,7 +19,7 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-6 pt-24">
         <div className="max-w-lg">
            <h1 className="font-heading text-5xl md:text-6xl font-semibold leading-tight text-primary-foreground mb-6">
-            Let your property with confidence
+            Your Trusted Partner in Property Letting 
           </h1>
           <p className="text-primary-foreground/80 text-base md:text-lg max-w-sm leading-relaxed">
            Professional letting and property management services for landlords across Batley and West Yorkshire
