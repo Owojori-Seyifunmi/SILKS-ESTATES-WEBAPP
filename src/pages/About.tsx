@@ -4,26 +4,23 @@ import Footer from "@/components/Footer";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
 import heroImage from "@/assets/hero-building.jpg";
 
-// ── Replace these placeholders with real data when client sends details ──────
-// To add a photo: import the image at the top and set the photo field.
-// Example: import ibrahimPhoto from "@/assets/team/ibrahim.jpg";
-// Then set photo: ibrahimPhoto on the relevant team member.
+
 const teamMembers = [
   {
-    name: "Team lead",               // ← update name
-    role: "Director",              // ← update role
-    bio: "Bio coming soon — update when client provides details.", // ← update bio
-    photo: null,                   // ← replace null with imported image variable
+    name: "Team lead",               
+    role: "Director",              
+    bio: "Bio coming soon — update when client provides details.", 
+    photo: null,                  
   },
   {
-    name: "Team Member 2",         // ← update name
-    role: "Property Manager",      // ← update role
+    name: "Team Member 2",         
+    role: "Property Manager",      
     bio: "Bio coming soon — update when client provides details.",
     photo: null,
   },
   {
-    name: "Team Member 3",         // ← update name
-    role: "Lettings Negotiator",   // ← update role
+    name: "Team Member 3",         
+    role: "Lettings Negotiator",   
     bio: "Bio coming soon — update when client provides details.",
     photo: null,
   },
