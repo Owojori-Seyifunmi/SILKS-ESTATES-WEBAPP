@@ -26,7 +26,7 @@ const billPoints = [
       </svg>
     ),
     label: "Awaab's Law",
-    description: "Landlords must investigate and fix hazardous conditions — including damp and mould — within strict legally defined timeframes.",
+    description: "Landlords must investigate and fix hazardous conditions including damp and mould within strict legally defined timeframes.",
   },
   {
     icon: (
@@ -35,7 +35,7 @@ const billPoints = [
       </svg>
     ),
     label: "Decent Homes Standard",
-    description: "All private rented homes must now meet the Decent Homes Standard — safe, in good repair, and free from serious hazards.",
+    description: "All private rented homes must now meet the Decent Homes Standard safe, in good repair, and free from serious hazards.",
   },
   {
     icon: (
@@ -44,7 +44,7 @@ const billPoints = [
       </svg>
     ),
     label: "New Ombudsman",
-    description: "A new Private Rented Sector Ombudsman will handle disputes quickly and fairly — all landlords must register.",
+    description: "A new Private Rented Sector Ombudsman will handle disputes quickly and fairly  all landlords must register.",
   },
   {
     icon: (
@@ -53,7 +53,7 @@ const billPoints = [
       </svg>
     ),
     label: "Limits on Rent Increases",
-    description: "Rent can only be increased once per year and must reflect the local market rate — preventing sudden unaffordable hikes.",
+    description: "Rent can only be increased once per year and must reflect the local market rate preventing sudden unaffordable hikes.",
   },
   {
     icon: (
@@ -62,7 +62,7 @@ const billPoints = [
       </svg>
     ),
     label: "Rolling Tenancies",
-    description: "Fixed-term tenancies are replaced with open-ended rolling agreements — giving tenants more security and stability.",
+    description: "Fixed-term tenancies are replaced with open-ended rolling agreements giving tenants more security and stability.",
   },
 ];
 
@@ -98,7 +98,7 @@ const RentersRightsBill = () => {
               <span className="text-brand">Renters' Rights Bill?</span>
             </h2>
             <p className="text-muted-foreground text-sm max-w-xl leading-relaxed">
-              Everything you need to know about how the Renters' Rights Bill affects you as a landlord — and how Silks Estates keeps you fully compliant.
+              Everything you need to know about how the Renters' Rights Bill affects you as a landlord and how Silks Estates keeps you fully compliant.
             </p>
           </div>
         </ScrollReveal>
