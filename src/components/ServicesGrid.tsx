@@ -57,7 +57,7 @@ const ServicesGrid = () => {
                 Tenant Find Service
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
-                Ideal for landlords who want help securing the right tenant—without full management fees.
+                Ideal for landlords who want help securing the right tenant without full management fees.
               </p>
             </div>
             <Link
