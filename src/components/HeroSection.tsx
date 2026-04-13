@@ -50,9 +50,12 @@ const HeroSection = () => {
               <div className="flex-1 w-full">
                 <label className="text-xs text-muted-foreground mb-1 block">Property Type</label>
                 <select className="w-full text-sm font-medium text-foreground bg-secondary rounded-lg px-3 py-2.5 border-0 focus:ring-1 focus:ring-ring outline-none appearance-none cursor-pointer">
-                  <option>Duplex House</option>
-                  <option>Apartment</option>
-                  <option>Villa</option>
+                  <option>Terraced Houses</option>
+                  <option>Detached</option>
+                  <option>Bungalow</option>
+                  <option>Flat</option>
+                  <option>All Properties</option>
+                  
                 </select>
               </div>
               <div className="flex-1 w-full">
