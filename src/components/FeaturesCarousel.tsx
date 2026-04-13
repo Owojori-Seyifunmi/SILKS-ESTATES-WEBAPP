@@ -1,9 +1,9 @@
-import { PoundIcon, MessageSquare, Wrench } from "lucide-react";
+import { EuroIcon, PoundSterling, MessageSquare, Wrench } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 const items = [
   {
-    icon: PoundIcon,
+    icon: PoundSterling,
     heading: "Pricing",
     content: "Keeping it simple and transparent.",
   },
