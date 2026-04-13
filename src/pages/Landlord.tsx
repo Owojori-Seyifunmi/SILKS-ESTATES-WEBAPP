@@ -75,7 +75,7 @@ const Landlord = () => {
             Confidence
           </h1>
           <p className="text-primary-foreground/80 text-base leading-relaxed mb-8 max-w-lg mx-auto">
-            Professional management, trusted tenants, and complete peace of mind—every step of the way.
+            Professional management, trusted tenants, and complete peace of mind every step of the way.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
